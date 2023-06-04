@@ -13,3 +13,6 @@ The common grades are:
 
 There are other grades like IP (*internet e protocolos / internet  protocols*), AS (*analise de sistemas / system analysis*) and DD (*design digital / digital design*), but I won't include them because they don't suit exactly on the purpose of this repository - as they aren't really related to coding.
 
+## Note
+
+It's worth to mention that most of the files included in this repository are in brazillian portuguese language.
