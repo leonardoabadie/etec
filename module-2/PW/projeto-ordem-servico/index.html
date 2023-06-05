@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <title>Teccel - Ordem de Serviço</title>
+</head>
+<body>
+    <!--Content Section-->
+    <section class="content">
+        <!--Header-->
+        <header class="">
+            <h1 id="title">Cadastrar Cliente</h1>
+        </header>
+        <!--Form-->
+        <form method="POST" action="./index.php">
+            <fieldset id="personal-data">
+                <!--Fieldset caption-->
+                <legend class="fieldset-caption">Dados do Usuário</legend>
+            
+                <section class="user-data">
+                    <label for="username">Nome<span class="star-char">*</span></label>
+                    <input type="text" name="username" maxlength="80" autocomplete="off"  placeholder="Ex.: Yan Wendel" id="username" required>
+                </section>
+
+                <section class ="user-data">
+                    <label for="phone-number">Telefone<span class="star-char">*</span></label>
+                    <input type="tel" name="phone-number" maxlength="9" autocomplete="off" placeholder="9 dígitos sem DDD, + ou ()" id="phone-number" required> 
+                </section>
+
+                <section class="user-data">
+                    <label for="email">Email<span class="star-char">*</span></label>
+                    <input type="email" name="email" maxlength="" autocomplete="off" placeholder="Ex.: email@email.com" id="email" required>
+                </section>
+
+                <section class="user-data">
+                    <label for="address">Endereço<span class="star-char">*</span></label>
+                    <input type="text" name="address" maxlength="50" autocomplete="off" placeholder="Ex.: Av. Paulista" id="address" required>
+                </section>
+
+                <section class="user-data">
+                    <label for="meeting-date">Data Inicial<span class="star-char">*</span></label>
+                    <input type="date" name="meeting-date" autocomplete="off" id="meeting-date" required>
+                </section>
+
+                <section class="user-data">
+                    <label for="return-date">Data-Devolutiva<span class="star-char">*</span></label>
+                    <input type="date" name="return-date" autocomplete="off" id="return-date" required>
+                </section>
+            </fieldset>
+            <fieldset id="device-data">
+                <!--Fieldset label-->
+                <legend class="fieldset-caption">Dados do Aparelho</legend>
+
+                <section class="user-data">
+                    <label for="device-type">Tipo-Aparelho<span class="star-char">*</span></label>
+                    <input type="text" name="device-type" maxlength="30" autocomplete="off" placeholder="Ex.: Celular" id="device-type" required>
+                </section>
+
+                <section class="user-data">
+                    <label for="device-brand">Marca<span class="star-char">*</span></label>
+                    <input type="text" name="device-brand" maxlength="30" autocomplete="off" placeholder="Ex.: Motorola" id="device-brand" required>
+                </section>
+
+                <section class="user-data">
+                    <label for="device-model">Modelo<span class="star-char">*</span></label>
+                    <input type="text" name="device-model" maxlength="30" autocomplete="off" placeholder="Ex.: G5 Plus" id="device-model" required>
+                </section>
+
+                <section class="user-data">
+                    <label for="serial-num">Número-Série</label>
+                    <input type="text" name="serial-num" maxlength="15" autocomplete="off" placeholder="Ex.: 5221974" id="serial-num">
+                </section>
+            </fieldset>
+            <fieldset id="user-description">
+                <!--Fieldset caption-->
+                <legend class="fieldset-caption">Informações Gerais</legend>
+
+                <section class="user-data">
+                    <label class="textarea-label" for="device-description">Descrição/Estado do Aparelho<span class="star-char">*</span></label>
+                    <textarea name="device-description" wrap="on" cols="30" rows="10" placeholder="Checklist do aparelho..." spellcheck="true" id="device-description" required></textarea>
+                </section>
+
+                <section class="user-data">
+                    <label class="textarea-label" for="customer-complaint">Defeito/Reclamação<span class="star-char">*</span></label>
+                    <textarea name="customer-complaint" wrap="on" cols="30" rows="10" placeholder="Reclamação do cliente em relação ao aparelho..." spellcheck="true" id="customer-complaint" required></textarea>                    
+                </section>
+            </fieldset>
+            <section class="submit-clear-button">
+                <input type="reset" name="" id="clear-btn" value="Limpar">
+                <input type="submit" id="submit-btn" value="Enviar">
+            </section>
+        </form>
+    </section>
+    <!--Script-->
+ </body>
+</html>

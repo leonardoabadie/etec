@@ -1,0 +1,253 @@
+// Imports
+@use './functions' as *;
+@use './mixin' as *;
+@use './reset';
+
+
+// Global Settings
+body {
+    @include Selection();
+    background-color: BackgroundColor(MAIN_BACKGROUND);
+    color: TextColor(DEFAULT_COLOR);
+}
+
+
+// Header
+body > .header {
+    background-color: BackgroundColor(MENU_BACKGROUND);
+    margin-bottom: 2em;
+
+    // Navigation
+    .nav-bar {
+        @include FlexBox($justify: space-between, $align: center);
+        margin: 0em 1em;
+        padding: .5em 0em;
+
+        .menu {
+            @include FlexBox($justify: center, $align: center, $gap: 3em);
+            list-style: none;
+            font-family: FontFamily(LINK);
+        
+            li {
+                a {
+                    @include MenuLink($transition: Transition(ALL));
+                    
+                    &:hover {
+                        @include MenuLink($transition: Transition(EASE), $color: TextColor(DEFAULT_COLOR), $decoration: underline);
+                    }
+                }
+                
+                button {
+                    @include Button();
+
+                    &:hover {
+                        @include Button($transition: Transition(EASE), $background: BackgroundColor(BTN_ALTERNATIVE_BACKGROUND));
+                    }
+                }
+            }
+        }
+    }
+
+    .modal {
+        background-color: BackgroundColor(MODAL_BACKGROUND);
+
+        .modal-dialog > .modal-content {
+            @include ModalContent();
+
+            &:hover {
+                @include ModalContent($transition: Transition(EASE), $border_color: BackgroundColor(MOL_BORDER_HOVER));
+            }
+
+            .modal-header > button {
+                @include Button($color: none, $weight: none);
+            }
+        }
+    }
+}
+
+
+// Container
+body > .container {
+    @include FlexBox(column, center, center, 5rem);
+    @include Container($width: 70%, $marg: 5em auto 15rem, $pad: 1em);
+
+    .content {
+        @include ContentText();
+        @include Grid(1fr 2fr, 2fr 1fr, 3rem, 8rem, $just_grid: center, $alg_grid: center, $just_content: center, $alg_content: center);
+
+        .intro-content,
+        .main-content {
+            .header {
+                margin-bottom: 3em;
+            }
+        }
+        
+        .alternative-content {
+            figure {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    .our-partners {
+        @include FlexBox(column, center, center, 1rem);
+        @include OurPartners();
+        
+        header {
+            margin-top: 1em;
+            text-align: center;
+            h3 {
+                font-family: FontFamily(TITLE);
+                font-size: FontSize(TITLE) - .5em;
+            }
+
+            span {
+                color:TextColor(ALTERNATIVE_COLOR);
+            } 
+        }
+
+        figure {
+            text-align: center;
+            img#partners {
+                width: 80%;
+            }
+        }
+
+    }
+
+    #user-reviews {
+        @include FlexBox(column, center, center, 3rem);
+
+        header {
+            h3 {
+                font-family: FontFamily(TITLE);
+                font-size: FontSize(TITLE) - .5em;
+                text-shadow: 3px 1px 3px #ff004c;
+            }
+
+            span {
+                color:TextColor(ALTERNATIVE_COLOR);
+            } 
+        }
+
+        .cards {
+            @include Grid(1fr 1fr, 1fr 1fr, 5rem, 15rem, $just_grid: center, $alg_grid: center, $just_content: center, $alg_content: center);
+            
+            .card {
+                @include Cards();
+            }
+        }
+    }
+}
+
+
+// Footer 
+body > .footer {
+    background-color: BackgroundColor(FOOTER_BACKGROUND);
+    color: TextColor(DEFAULT_COLOR);
+
+    .social-media {
+        .btn {
+            @include SocialMediaLinks();
+
+            &:hover {
+                @include SocialMediaLinks($transition: Transition(EASE), $background: #fd0f56, $border_radius: .5em)
+            }
+        }      
+    }
+
+    .formulary {
+        form {
+            font-family: FontFamily(FORM);
+            font-size: FontSize(DEFAULT);
+        }
+    }
+
+
+    .nocopyright {
+        @include NoCopyright();
+    }
+}
+
+@media screen and (max-width: 678px) {
+    body > .container {
+        @include FlexBox($direction: colulmn, $gap: none);
+        @include Container($marg: 0 0 8em, $pad: 0,$width: 100vw);
+
+        //grid container
+        .content {
+            @include Grid(1fr 1fr 1fr, 1fr, 0em, 0em, $just_grid: center, $alg_grid: center, $just_content: center, $alg_content: center);
+
+            h1,
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            p {
+                font-size: .8em;
+                padding: 0em 2em;
+            }
+            
+            .intro-content,
+            .main-content {
+                .header {
+                    margin-bottom: 2em;
+                }
+            }
+
+            // aside >> figure >> img
+            .display-environment {
+                display: none;
+            }
+
+            .display-highfive {
+                grid-row-start: 3;
+                grid-row-end: 4;
+                width: 100%;
+                figure {
+                    text-align: center;
+
+                    img {
+                        width: 70%;
+                    }
+                }
+            }        
+        }
+
+        .our-partners {
+            border: none;
+            border-radius: 0;
+        }
+
+        #user-reviews {
+            header {
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .cards {
+                @include Grid(1fr, 1fr, 2rem, 0, $just_grid: center, $alg_grid: center, $just_content: center, $alg_content: center);
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body > .header {
+        .nav-bar {
+            @include FlexBox($direction: column, $justify: center, $gap: 1em);
+            .menu {
+                @include FlexBox($direction: column, $gap: 1em);
+
+                li > button {
+                    display: none;
+                }
+            }
+        }
+    }
+}

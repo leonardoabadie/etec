@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Autor" content="Leonardo Abadie">
+        <!--Importing Bootstrap.min.css-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./assets/css/success-wall.css">
+        <meta name="url" content="https://www.unifiedcts.com/docs/success-wall.html">
+        <title>Success Wall | Unified CTS | Photo Gallery</title>
+        <!--SEO-->
+        <meta name="description" content="Unified CTS - We are...">
+        <meta name="keyword" content="Photo Gallery , Success Wall , Unified Collaborate Team System">
+    </head>
+    <body>
+        <!--Header-->
+        <header class="header">          
+            <!--Navigation-->
+            <nav class="nav-bar">     
+                <figure class="logo">
+                    <a href="./success-wall.html"><img src="./assets/components/photos/logo-unifiedCTS.png" alt="unified cts logo"></a>
+                </figure>  
+                <!--Menu-->
+                <ul class="menu">
+                <li> <a href="./index.html" target="_blank">Home</a></li>
+                    <li> <a href="./form.html" target="_blank">Contact</a> </li>
+                    <!--Button trigger modal for Bootstrap Modal-->
+                    <li> 
+                        <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#about-us">About us</button> 
+                    </li>
+                </ul>
+            </nav>
+            <!--Bootstrap Modal-->
+            <section class="modal fade" id="about-us" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <section class="modal-dialog">
+                    <!--Section: modal-content-->
+                    <section class="modal-content">
+                        <!--Section: modal-header-->
+                        <section class="modal-header">
+                            <h5 class="modal-title" id="title-about-us">Work With Us</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </section>
+
+                        <!--Section: modal-body-->
+                        <section class="modal-body">
+                            <p class="text">Every day we imagine, study, and invent new ways to collaborate with people, and you can help us! If you want to become a contributor, go to the still contact page and fill out the formulary!</p>
+                        </section>
+                    </section>
+                    <!--Section: modal-content-->
+                </section>
+            </section>
+            <!--Bootstrap Modal-->           
+        </header>
+        <!--Header-->
+
+        <!--Section: container-->
+        <section class="container">
+            <!--Section: carousel-->
+            <section class="carousel">
+                <!--Title Header-->
+                <header class="title">
+                    <h1>Our Moments</h1>
+                </header>
+                <!--Title Header-->
+                
+                <!--Carousel-->
+                <section id="photos-carousel" class="carousel slide" data-bs-ride="true">
+                    <!--Section: carousel-indicators-->
+                    <section class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
+                    </section>
+                    <!--Section: carousel-indicators-->
+                    
+                    <!--Section: carousel-inner-->
+                    <div class="carousel-inner">
+                        <!--Section: carousel-item-->
+                        <section class="carousel-item " pt-5>
+                            <img src="./assets/components/photos/help-them-2.jpg" alt="">
+                        </section>
+                        <!--Section: carousel-item-->
+                        <section class="carousel-item " pt-5>
+                            <img src="./assets/components/photos/interagindo-ong-2.jpg" alt="">
+                        </section>
+                        <!--Section: carousel-item-->
+                        <section class="carousel-item " pt-5>
+                            <img src="./assets/components/photos/happy-ong-2.jpg" alt="">
+                        </section>
+                        <!--Section: carousel-item-->
+                        <section class="carousel-item " pt-5>
+                            <img src="./assets/components/photos/playing-ong-2.jpg" alt="">
+                        </section>
+                        <!--Section: carousel item-->
+                        <section class="carousel-item active " p-5>
+                            <img src="./assets/components/photos/criancas-carentes-ong.jpg" alt="">
+                        </section>
+                        <!--Section: carousel item-->
+                        <section class="carousel-item " pt-5>
+                            <img src="./assets/components/photos/ong-2.jpg" alt="">
+                        </section>
+                    </div>
+                    <!--Section: carousel-inner-->
+
+                    <!--Control Buttons-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#photos-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#photos-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    <!--Control Buttons-->
+
+                    <!--Saying-->
+                    <header class="sub-title">
+                        <h2><span>Heart</span> by <span>Heart</span></h2>
+                    </header>
+                    <!--Saying-->
+                </section>
+                <!--Carousel-->
+            </section>          
+            <!--Section: carousel-->
+
+            <!--Section: learning-programming-->
+            <section class="learning-programming">
+                <!--Header-->
+                <header>
+                    <h2><span>Do you want</span> to learn how to <span>build websites</span> like this?</h2>
+                </header>
+                <!--Header-->
+                <!--Section: content-->
+                <section class="content">
+                    <p>Websites to learn programming and improve your skills</p>
+
+                    <!--links unordained list-->
+                    <ul class="links">
+                        <li><a href="https://www.hackerrank.com/" target="_blank">HackerRank  -  Challenges of programming</a></li>
+                        <li><a href="https://www.codewars.com/" target="_blank">CodeWars  -  Challenges of programming</a></li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">Free Code Camp  -  Free Courses about programming</a></li>
+                        <li><a href="https://codepen.io/tunk/pen/nrXmNJ" target="_blank">CodePen  -  HTML5 Playground</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer  -  MDN Web Docs</a></li>
+                        <li><a href="https://sass-lang.com/" target="_blank">SASS  -  Elegant CSS</a></li>
+                        <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap  -  Modern Framework</a></li>
+                    </ul>
+                    <!--links unordained list-->
+                </section>
+                <!--Section: content-->
+            </section>
+        </section>
+        <!--Section: container-->
+
+        <!--Bootstrap Footer-->
+        <footer class="footer text-center ">
+            <!-- Grid container -->
+            <section class="container p-4">
+            <!-- Section: Social media -->
+            <section class="social-media mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-floating m-2" href="#!" role="button" >
+                <img class="fab fa-facebook-f" src="./assets/components/photos/facebook-icon.png" alt="facebook media" width="30px"></img>
+                </a>
+    
+                <!-- Instagram -->
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                <img class="fab fa-instagram" src="./assets/components/photos/instagram-icon.png" alt="instagram media" width="30px"></img>
+                </a>
+    
+                <!-- Linkedin -->
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                <img class="fab fa-linkedin-in" src="./assets/components/photos/linkedin-icon.png" alt="linkedin media" width="30px"></img>
+                </a>
+    
+                <!-- Github -->
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                <img class="fab fa-github" src="./assets/components/photos/github-icon.png" alt="github media" width="30px"></img>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+    
+            <!-- Section: Form -->
+            <section class="formulary">
+                <form action="">
+                <!--Grid row-->
+                <section class="row d-flex justify-content-center">
+                    <!--Grid column-->
+                    <section class="col-auto">
+                    <p class="pt-2">
+                        <strong>Sign up for our newsletter</strong>
+                    </p>
+                    </section>
+                    <!--Grid column-->
+    
+                    <!--Grid column-->
+                    <section class="col-md-5 col-12">
+                    <!-- Email input -->
+                    <section class="form-outline mb-4">
+                        <input type="email" id="user-email" class="form-control" required/>
+                        <label class="form-label" for="user-email" style="margin-top: 10px;"><strong>Email address</strong></label>
+                    </section>
+                    </section>
+                    <!--Grid column-->
+    
+                    <!--Grid column-->
+                    <section class="col-auto">
+                    <!-- Submit button -->
+                    <button type="submit" class="btn mb-4" style="background-color:#fff; color:#ff004c; border: none;">
+                        <strong>Subscribe</strong>
+                    </button>
+                    </section>
+                    <!--Grid column-->
+                </section>
+                <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+            </section>
+            <!-- Grid container -->
+    
+            <!-- Copyright -->
+            <section class=" nocopyright text-center p-3">
+            <p style="display: inline;">© 2022 NoCopyright: Unified Collaborate Team System</p>
+            </section>
+            <!-- Copyright -->
+        </footer>
+        <!--Bootstrap Footer-->
+
+        <!--Javascript Files-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    </body>
+</html>

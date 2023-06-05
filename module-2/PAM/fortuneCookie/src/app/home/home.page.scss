@@ -1,0 +1,67 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+section.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+
+  margin-top: 5em;
+
+  section.fortune-cookie-image {
+    text-align: center;
+    img {
+      width: 50%;
+    }
+  }
+
+  section.output {
+    padding: 1em;
+    p {      
+      color: #ffe600;
+      font-size: 1.2em;
+      text-align: center;
+    }
+  }
+
+  section.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+}

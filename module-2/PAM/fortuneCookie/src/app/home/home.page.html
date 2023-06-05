@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <!--Icon-->
+    <ion-button slot="start" color="warning" style="padding-left: 1em">
+      <ion-icon name="restaurant-outline"> </ion-icon>
+    </ion-button>
+    <!--Icon-->
+    <!--Title-->
+    <ion-title style="padding-left: 1em; font-style:italic"> Fortune Cookies Generator </ion-title>
+    <!--Title-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <section class="content">
+    <section class="fortune-cookie-image">
+      <img src="{{imagePath}}" alt="Fortune cookie image">
+    </section>
+  
+    <section class="output">
+      <p>{{secretPhrase}}</p>
+    </section>
+  
+    <section class="buttons">
+      <ion-button color="danger" (click)="breakFortuneCookie()">Break Fortune Cookie</ion-button>
+      <ion-button color="success" (click)="newFortuneCookie()">New Fortune Cookie</ion-button>
+    </section>
+  </section>
+</ion-content>
+

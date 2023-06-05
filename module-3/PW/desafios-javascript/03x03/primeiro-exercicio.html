@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Exercício</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function maiorValor(a, b) { return a >= b ? a : b; }
+        var n1, n2;   
+        n1 = parseInt(prompt("Digite o primeiro número (pós-incremento) :> "));
+        n2 = parseInt(prompt("Digite o segundo número (pré-incremento) :> "));
+        document.write("Maior valor antes do incremento @> " + maiorValor(n1, n2) + "</br>");
+        document.write("Maior valor depois do incremento @> " + maiorValor(n1++, ++n2));
+    </script>
+</body>

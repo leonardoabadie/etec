@@ -1,0 +1,7 @@
+{
+  "name": "biscoitoSorte",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

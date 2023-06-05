@@ -1,0 +1,125 @@
+*, *::before, *::after {
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(120deg, #174f97, #144381, #042857, #020130, #000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content {
+    max-width: 55%;
+    margin: 2em 0em;
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    box-shadow: 0px 2px 30px 11px rgba(0, 0, 0, 0.99);
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+
+    padding: .5em;
+}
+
+header > h1#title {
+    font-size: 2.5em;
+}
+
+form { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+   
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 1em 0em;
+}
+
+fieldset{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2em;
+    padding-left: 3em;
+}
+
+legend.fieldset-caption {
+    margin-bottom:0.8em;
+}
+
+label > span.star-char {
+    color: #ff0055;
+    font-size: 1.5em;
+}
+
+input {
+    max-width: 80%;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #144381;
+    outline: none;
+    padding: 2px 0px 2px 5px;
+}
+
+fieldset#personal-data,
+fieldset#device-data,
+fieldset#user-description {
+    border: 0;
+}
+
+legend.fieldset-caption {
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 500;
+}
+
+textarea {
+    resize: none;
+
+    border: 3px solid #000;
+    color: #144381;
+    outline: none;
+    margin-top: 1em;
+    padding: 5px;
+}
+
+section.submit-clear-button {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+section.submit-clear-button > input {
+    padding: 1em 1.3em;
+    transition: .5s all;
+    
+    border: 0;
+    border-radius: 0.2em;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+section.submit-clear-button > input:hover {
+    cursor: pointer;
+
+    color: #3593ff;
+}

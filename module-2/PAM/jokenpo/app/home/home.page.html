@@ -1,0 +1,54 @@
+<ion-content [fullscreen]="true" color="">
+    <!--Container-->
+    <section class="container">
+      <!--Header-->
+      <header>
+        <h1 class="titulo"><span>Jo</span><span>Ken</span><span>Po</span></h1>
+      </header>
+      <!--Header-->
+
+      <!--Placar-->
+      <section class="placar">
+        <section class="sub-titulo">
+          <h2>Placar</h2>
+        </section>
+
+        <section class="pontuacao">
+          <section class="pontosUsuario">
+            <p>Usuario</p>
+            <p class="pontuacao">{{pontuacaoUsuario}}</p>
+          </section>
+          <section class="pontosMaquina">
+            <p>Maquina</p>
+            <p class="pontuacao">{{pontuacaoMaquina}}</p>
+          </section>
+        </section>
+      </section>
+      <!--Placar-->
+
+      <!--Arena_Batalha-->
+      <section class="arena-batalha">
+        <figure>
+          <img src={{gestoUsuarioImagem}} alt="Imagem do gesto do usuario">
+          <img src="../../assets/images/logo-versus.png" alt="Image - versus">
+          <img src="{{gestoMaquinaImagem}}" alt="Imagem do gesto da maquina">
+        </figure>        
+      </section>
+      <!--Arena_Batalha-->
+
+      <!--Iniciar_Partida-->
+      <section class="botao" (click)="iniciarPartida()">
+        <p>{{mensagemUsuario}}</p>
+      </section>
+      <!--Iniciar_Partida-->
+
+      <!--Gestos-->
+      <section class="gestos">
+        <img src="../../assets/images/pedra-direita.png" alt="" (click)="pegarGesto('pedra')">
+        <img src="../../assets/images/papel-direita.png" alt="" (click)="pegarGesto('papel')">
+        <img src="../../assets/images/tesoura-direita.png" alt="" (click)="pegarGesto('tesoura')">
+      </section>
+      <!--Gestos-->
+    </section>
+    <!--Container-->
+</ion-content>

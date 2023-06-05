@@ -1,0 +1,76 @@
+body {
+    /*background-color: rgb(0, 0, 0);*/
+    color: white;
+    background-image:Url("img/img1.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+h1 {
+    color: rgb(26, 26, 214);
+    text-align: center; 
+    font-size: 55px;
+    font-family: 'Franklin Gothic Medium';   
+} 
+  
+.texto {
+    
+    color: rgb(0, 204, 255);
+    text-align: center;
+    font-family: arial;
+
+}
+.cadrastro{
+    
+    text-align: center;
+    font-family: arial;
+
+}
+.contant {
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    background-color: brown
+}   
+.Entre{
+    background-color: blueviolet;
+    text-align: start;
+}
+
+
+.rodape {
+    background-color: rgb(8, 81, 165);
+    
+}
+.footer{
+    height: 100%;
+    background: black;
+    position: relative;
+
+}
+.ligar{
+    margin-left: 40px;
+
+}
+.footer.footer .rodape {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+}
+.footer.footer .rodape > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+.footer h2 {
+    color: white;
+}
+.footer p {
+    font-size: 15px;
+    color: whitesmoke;
+}
+.redes-sociais {
+    color: blueviolet;
+    
+}

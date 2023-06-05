@@ -1,0 +1,199 @@
+@use './functions' as *;
+
+@mixin FlexBox($direction:row, $justify: none, $align:none , $gap: none) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin Grid($rows, $columns, $row_gap, $col_gap, $just_grid: stretch, $alg_grid: stretch, $just_content: stretch, $alg_content: stretch) {
+    display: grid;
+    grid-template-rows: $rows;
+    grid-template-columns: $columns;
+    column-gap: $col_gap;
+    row-gap: $row_gap;
+    justify-content: $just_grid;
+    align-content: $alg_grid;
+    justify-items: $just_content;
+    align-items: $alg_content;
+}
+
+@mixin Selection() {
+    h1::selection,
+    h2::selection,
+    h3::selection,
+    h4::selection,
+    h5::selection,
+    h6::selection {
+        background-color: ElementSelection(TITLE_BACKGROUND);
+        color: ElementSelection(TITLE_COLOR);
+    }
+
+    p::selection,
+    span::selection,
+    label::selection,
+    input::selection,
+    textarea::selection,
+    strong::selection {
+        background-color: ElementSelection(TEXT_BACKGROUND);
+        color: ElementSelection(TEXT_COLOR);
+    }
+
+    a::selection {
+        background-color: ElementSelection(LINK_BACKGROUND);
+        color: ElementSelection(LINK_TEXT_COLOR);
+    }
+}
+
+@mixin MenuLink($transition: Transition(DEFAULT_TRANSITION), $color: TextColor(ALTERNATIVE_COLOR), $size: FontSize(LINK), $decoration: none) {
+    color: $color;
+    font-size: $size;
+    text-decoration: $decoration;
+    transition: $transition;    
+}
+
+@mixin Button($transition: Transition(DEFAULT_TRANSITION), $background: BackgroundColor(BTN_BACKGROUND), $color: TextColor(DEFAULT_COLOR), $weight: 700) {
+    background-color: $background;
+    color: $color;
+    font-weight: $weight;
+    transition: $transition;
+}
+
+@mixin SocialMediaLinks($transition: Transition(DEFAULT_TRANSITION), $background: none, $border: none, $border_radius: none) {
+    background-color: $background;
+    border: $border;
+    border-radius: $border_radius;
+    transition: $transition;
+}
+
+@mixin ModalContent($transition: Transition(DEFAULT_TRANSITION), $border_color: BackgroundColor(MOL_BORDER), $background: BackgroundColor(MOL_CONTENT_BACKGROUND)) {
+    background-color: $background;
+    border: 1px solid $border_color;
+    transition: $transition;
+}
+
+@mixin Container($transition: none, $background:none, $font: FontFamily(PARAGRAPH), $border: none, $border_radius: none, $width: none, $marg: none, $pad: none) {
+    // $border_radius: 1em, $width: 30%
+    background-color: $background;
+    border: $border;
+    border-radius: $border_radius;
+    font-family: $font;
+    margin: $marg;
+    padding: $pad;
+    transition: $transition;
+    width: $width;
+}
+
+@mixin Carousel($background: #1b1a1b, $radius: 1.5rem, $pad: 2rem 3rem) {
+    background-color: $background;
+    border-radius: $radius;
+    padding: $pad;
+}
+
+@mixin OurPartners($background:#1b1a1b, $border_radius: 1rem) {
+    background-color: $background;
+    border-radius: $border_radius;
+}
+
+@mixin ContentText() {
+    h1, h2 {
+        color: TextColor(ALTERNATIVE_COLOR);
+        font-family: FontFamily(TITLE);
+        text-align: center;
+    }
+
+    h1,
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: FontSize(DEFAULT);
+    }
+
+    span {
+        color: TextColor(SPAN);
+    }
+    
+}
+
+@mixin Cards($border: none, $border_radius: 1em, $shadow: 5px 5px 3em #000) {
+    border: $border;
+    border-radius: $border_radius;
+    box-shadow: $shadow;
+
+    &-img-top {
+        background-color: #1b1a1b;
+    }
+    
+    &-body {
+        background-color: #000;
+        font-size: 1em;
+        h5 {
+            font-family: FontFamily(TITLE);
+            font-style: italic;
+        }
+        p {
+            font-family: FontFamily(PARAGRAPH);
+            font-size: FontSize(DEFAULT);
+        } 
+    }
+}
+
+@mixin Title($transition: Transition(DEFAULT_TRANSITION), $color: TextColor(ALTERNATIVE_COLOR), $font: FontFamily(TITLE), $font_size: FontSize(TITLE), $margin: 1em .5em .5em) {
+    color: $color;
+    font-family: $font;
+    font-size: $font_size;
+    margin: $margin;
+    transition: $transition;
+}
+
+@mixin NoCopyright($background: #fd0f56, $font: FontFamily(PARAGRAPH), $size: FontSize(DEFAULT)) {
+    background-color: $background;
+    font-family: $font;
+    font-size: $size;
+}
+
+@mixin Input($transition: Transition(ALL), $font: FontFamily(FORM), $font_size: FontSize(INPUT), $border_color: transparent, $border_radius: .5em, $color: none, $height: 2em, $width: 80%, $outline: none, $margin: 0 auto, $padding: 1em) {
+    border: 1px solid $border_color;
+    border-radius: $border_radius;
+    color: $color;
+    font-family: $font;
+    font-size: $font_size;
+    height: $height;
+    width: $width;
+    margin: $margin;
+    outline: $outline;
+    padding: $padding;
+    transition: $transition;
+}
+
+@mixin Label($display, $color, $font, $font_size, $letter_spacing, $align) {
+    display: $display;
+    color: $color;
+    font-family: $font;
+    font-size: $font_size;
+    letter-spacing: $letter_spacing;
+    text-align: $align;
+}
+
+@mixin TextArea($transition: Transition(DEFAULT_TRANSITION), $background: BackgroundColor(TEXTAREA), $color: TextColor(DEFAULT_COLOR), $font: FontFamily(FORM), $font_size: FontSize(LABEL), $border_color: transparent, $border_radius: 1em, $width: 100%, $outline: none, $padding: .5em) {
+    background-color: $background;
+    border-radius: $border_radius;
+    color: $color;
+    font-family: $font;
+    font-size: $font_size - .2em;
+    border: 1px solid $border_color;
+    outline: $outline;
+    padding: $padding;
+    width: $width;
+    transition: $transition;
+}
+
+@mixin SubmitButton($border: none, $border_radius: 1em, $padding: .8em 2em) {
+    border: $border;
+    border-radius: $border_radius;
+    padding: $padding;
+}

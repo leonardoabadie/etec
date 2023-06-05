@@ -1,0 +1,30 @@
+@use "./variables" as *;
+
+@function BackgroundColor($background) {
+    @return map-get($m_background, $background);
+}
+
+@function TextColor($color) {
+    @return map-get($m_textcolor, $color);
+}
+
+@function FontSize($size) {
+    @return map-get($m_fontsize, $size);
+}
+
+@function FontFamily($font) {
+    @return map-get($m_fontfamily, $font);
+}
+
+@function ElementSelection($property) {
+    @return map-get($m_elementselection, $property);
+}
+
+@function Transition($transition) {
+    @return map-get($m_transition, $transition);
+    
+}
+
+@function DeviceWidth($wide) {
+    @return map-get($m_devicewidth, $wide);
+}

@@ -1,0 +1,398 @@
+/* Specific the name fonts and your path */
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/inter.woff2);
+}
+@font-face {
+    font-family: 'Roboto regular';
+    src: url(../fonts/roboto-regular.woff2);
+}
+@font-face {
+    font-family: 'Roboto thin';
+    src: url(../fonts/roboto-thin.woff2);
+}
+@font-face {
+    font-family: 'Roboto light italic';
+    src: url(../fonts/roboto-light-italic.woff2);
+}
+@font-face {
+    font-family: 'Poppins medium';
+    src: url(../fonts/poppins-medium.woff2);
+}
+@font-face {
+    font-family: 'Poppins light';
+    src: url(../fonts/poppins-light.woff2);
+}
+@font-face {
+    font-family: 'Poppins extra light italic';
+    src: url(../fonts/alternative-fonts/poppins-extra-light-italic.woff2);
+}
+
+@font-face {
+    font-family: 'Roboto light italic';
+    src: url(../fonts/alternative-fonts/roboto-light-italic.woff2);
+}
+
+@font-face {
+    font-family: 'Roboto extra bold';
+    src: url(../fonts/alternative-fonts/roboto-extra-bold.woff2);
+}
+
+/*Create variables in document root HTML*/
+:root {
+    --paragraphFont: 'Poppins light', 'Open Sans';
+    --alternativeParagraphFont: Inter, 'Roboto regular', 'Open Sans';
+    --weightSourceParagraph: 700;
+    --paragraphColor: rgb(131, 13, 228);
+    --sizeParagraphFont: 1em;
+    --sizeH1Title: 1.8rem;
+    --titleH1Font: 'Poppins medium', 'Open Sans';
+    --colorTitleH1: rgb(255, 255, 255);
+    --sizeH2Title: 1.5rem;
+    --titleH2Font: 'Roboto light italic', 'Open Sans';
+    --colorTitleH2: rgb(255, 0, 85);
+    --sizeH3Title: 1em;
+    --titleH3Font: 'Roboto extra bold', 'Open Sans';
+    --colorTitleH3: rgb(255, 0, 85);
+    --maxWidthFooter: 100%;
+    --fontColorFooter: rgb(255, 217, 0);
+    --colorBorderTop: rgb(255, 0, 85);
+    --colorBorderRight: rgb(0, 238, 255);
+    --colorBorderBottom: rgb(140, 0, 255);
+    --colorBorderLeft: rgb(0, 140, 255);
+}
+
+/* update the values of margin and padding the all elements */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Global definitions */
+body {
+    background: linear-gradient(180deg, rgb(105, 55, 161), rgb(184, 153, 241));
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: auto;
+}
+
+/* Styling the title size and font*/
+
+h1 {
+    color: var(--colorTitleH1);
+    font-family: var(--titleH1Font); /*Poppins medium*/
+    font-size: var(--sizeH1Title);
+}
+
+h2 {
+    color: var(--colorTitleH2);
+    font-family: var(--titleH2Font); /*Roboto light italic*/
+    font-size: var(--sizeH2Title);
+}
+
+h3 {
+    font-family: var(--titleH3Font);
+    color: var(--colorTitleH3);
+    font-size: var(--sizeH3Title);
+}
+
+p {
+    color: var(--paragraphColor);
+    font-family: var(--paragraphFont, --alternativeParagraphFont); /*Poppins light - alternative fonts: Inter or Roboto regular*/
+    font-size: var(--sizeParagraphFont);
+}
+
+address {
+    font-family: 'Poppins extra light italic';
+    font-size: 0.8em;
+    font-style: oblique;
+    font-weight: 100;
+}
+
+label {
+    font-family: var(--alternativeParagraphFont);
+    font-size: 1em;
+}
+
+address,
+label,
+footer span {
+    font-weight: 600;
+}
+
+.top-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0px 70px;
+}
+
+.title {
+    line-height: 35px;   
+}
+
+.title .team-system {
+    margin-left: 80px;
+}
+
+/*conteiner flex*/
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: rgb(0, 238, 255);
+    font-family: 'Poppins light';
+    text-decoration: none;
+    transition: 1s all;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 1s ease;
+}
+
+
+.introduction-section,
+main {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 5px solid;
+    background-color: rgb(255, 184, 255);
+    border-top-color: var(--colorBorderRight);
+    border-right-color: var(--colorBorderRight);
+    border-bottom-color: var(--colorBorderBottom);
+    border-left-color: var(--colorBorderLeft);
+}
+
+.introduction-section header,
+main header {
+    text-align: center;
+    margin: 15px 0px 35px;    
+}
+
+.introduction-section .content-section {
+    padding: 20px;
+}
+
+.introduction-section {
+    margin-bottom: 50px;
+}
+
+main article {
+    padding: 20px;
+    
+}
+
+main {
+    margin-bottom: 5%;
+}
+
+aside {
+    background-color: rgb(248, 231, 153);
+}
+
+img {
+    min-height: 100px;
+    width: 35em;
+
+}
+
+span {
+    color: rgb(255, 255, 255);
+}
+
+footer span {
+    font-family: 'Poppins extra light italic';
+    font-size: 0.9em;
+}
+
+address,
+label,
+footer p,
+footer span {
+    color: var(--fontColorFooter);
+}
+
+footer {
+    background-color: rgb(96, 135, 233);
+    border-radius: 8px;
+    max-width: var(--maxWidthFooter);
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+footer .main-content {
+    display: flex; /*Default display flex is row*/
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 2em 1.5em;
+}
+
+.box h3 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 3em 0 0 0;
+}
+
+.left .content .social {
+    margin: 2em 0 0 0;
+}
+
+.left .content .social a {
+    padding: 0 2.5em;
+}
+
+.fas {
+    max-width: 1em;
+    transition: 0.5s all;
+}
+
+.fas:hover {
+    font-size: 1.5em;
+    transition: 0.5s ease;
+}
+
+.credits {
+    text-align: center;
+}
+
+.center .content .contact {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.center .content .contact figure {
+    margin-right: 15px;
+}
+
+.right .content .description {
+    padding: 1em 2em;
+}
+
+.right form {
+    background-color: rgb(45, 101, 243);
+    border-radius: 8px;
+    margin-top: 1.5em;
+    padding: 1em 2em;
+}
+
+.right form section {
+    display: flex;
+    flex-direction: column;
+}
+
+.right form section input {
+    border: 1.2px solid rgb(252, 185, 0);
+    padding-left: 5px;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    border-right-width: 3px;
+    font-size: 0.8em;
+    font-family: 'Inter';
+    margin: 1em 0;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.right form .username input:focus,
+.right form .username input:valid,
+.right form .user-email input:focus,
+.right form .user-email input:valid {
+    border-color: rgb(255, 0, 85);
+    color: rgb(110, 11, 202);
+}
+
+form .btn input{
+    background: rgb(183, 214, 255);
+    border: none;
+    border-radius: 25px;
+    color: rgb(162, 0, 255);
+    font-family: 'Inter'; 
+    font-weight: 900;
+    padding: 15px;
+    transition: 0.5s all ease;
+}
+
+form .btn input:hover{
+    background: transparent;
+    color: white;
+    transition: 0.5s;   
+}
+
+/*I'll try to make this site responsive*/
+
+@media screen and (max-width: 800px) {
+    
+    .top-header {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 3em 0;
+        padding: 0;
+    }
+
+    .top-header .title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3em;
+
+    }
+
+    .title .team-system {
+        margin: 0;
+    }
+
+    .introduction-section,
+    main {
+        flex-direction: column;
+    }
+
+    .introduction-section img,
+    main img {
+        max-width: 50%;
+    }
+
+    .main-content  {
+        flex-direction: column;
+    }
+
+    .main-content .right {
+        display: none;
+    }
+
+    .main-content .box  h3 {
+        text-align: start;
+    }
+  
+}
+
+
+
+
+/*
+** expicação de formatação:
+** por padrão, o tamanho de uma fonte(de texto) é 100%, que poderia ser representado simplesmente por <h1></h1>, ou font-size: 100%, ou font-size: medium. No entanto, quando definimos em pixels ele permanece com a definição realizada independente do browser ou dos diferentes tipos de tela, portanto, o pixel é uma medida fixa.
+** Nas nossas próximas atividades vamos tentar utilizar 'em' que também trabalha como porcentagem, de um modo um pouco diferente. 1em equivale a 100%, ou seja, o tamanho padrão, se em for 2em então dobramos o valor padrão da fonte, se for 0.5 em, o texto terá a metade do tamanho comum!
+** em e rem baseiam-se no tamanho da fonte.....
+*/

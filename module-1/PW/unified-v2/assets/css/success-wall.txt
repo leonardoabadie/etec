@@ -1,0 +1,209 @@
+/* Specific the name fonts and your path */
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../components/fonts/inter.woff2);
+}
+@font-face {
+    font-family: 'Roboto regular';
+    src: url(../components/fonts/roboto-regular.woff2);
+}
+@font-face {
+    font-family: 'Roboto thin';
+    src: url(../components/fonts/alternative-fonts/roboto-thin.woff2);
+}
+@font-face {
+    font-family: 'Roboto light italic';
+    src: url(../components/fonts/roboto-light-italic.woff2);
+}
+@font-face {
+    font-family: 'Poppins medium';
+    src: url(../components/fonts/poppins-medium.woff2);
+}
+@font-face {
+    font-family: 'Poppins light';
+    src: url(../components/fonts/poppins-light.woff2);
+}
+@font-face {
+    font-family: 'Poppins extra light italic';
+    src: url(../components/fonts/alternative-fonts/poppins-extra-light-italic.woff2);
+}
+
+@font-face {
+    font-family: 'Roboto light italic';
+    src: url(../components/fonts/alternative-fonts/roboto-light-italic.woff2);
+}
+
+@font-face {
+    font-family: 'Roboto extra bold';
+    src: url(../components/fonts/alternative-fonts/roboto-extra-bold.woff2);
+}
+
+/* Default Properties in the root document */
+
+:root {
+    --LinkFontSize: 1em;
+    --TitleFontSize: 1.5em;
+    --TextFontSize: 1.2em;
+    --TextColor: rgb(255, 255, 255);
+    --DefaultColor: rgb(240, 49, 106);
+    --DefaultBorderRadius: .5em;
+    --TitleFontStyle: 'Poppins light', Arial;
+    --LinkFontStyle: 'Poppins light', Arial;
+    --TextFontStyle: 'Inter';
+}
+
+/* Global settings */
+
+body {
+    box-sizing: border-box;
+    background-color: rgb(28, 4, 36);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+header {
+    background-color: rgb(25, 2, 34);
+    margin-bottom: 12em;
+}
+
+/* Styling: link */
+
+a {
+    color: rgb(116, 0, 170);
+    font-size: var(--LinkFontSize);
+    text-decoration: none;
+    transition: .6s all;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+#link-home:hover{
+    color: rgb(120, 245, 70);
+}
+
+#link-contact:hover {
+    color: rgb(232, 255, 28);
+}
+
+h1 {
+    font-family: var(--TitleFontStyle);
+    font-size: var(--TitleFontSize);
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0em 1em;
+    padding: .5em 0em;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    list-style: none;
+    font-family: var(--LinkFontStyle);
+}
+
+/* Modal */
+
+nav > ul > li > .btn {
+    background-color: rgb(240, 49, 106);
+    color: #fff;
+    font-weight: 700;
+    transition: .5s;
+}    
+
+nav > ul > li > .btn:hover {
+    color: #fff;
+    background-color: rgb(116, 0, 170);
+    transition: .5s ease;
+}    
+
+.header > .modal {
+    background-color: rgba(53, 49, 53, 0.37);
+}
+
+.header > .modal > .modal-dialog > .modal-content{
+    background-color: rgb(27, 25, 27);
+    border: 1px solid rgb(240, 49, 106);
+    transition: .3s;
+}
+
+.header > .modal > .modal-dialog > .modal-content:hover {
+    background-color: rgb(68, 19, 160);
+    border: none;
+    transition: .3s ease;
+}
+
+.header > .modal > .modal-dialog > .modal-content > .modal-header > .modal-title {
+    font-weight: 800;
+    margin-left: .5em;
+}
+
+.modal-header > button {
+    transition: .5s;
+}
+
+.modal-header > button:hover {
+    background-color: var(--DefaultColor);
+    transition: .5s ease;
+}
+
+.container {
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    padding: 2em;
+}
+
+.container > .title > h1 > .btn {
+    background-color: rgb(99, 23, 134);
+    border-radius: 1em;
+    color: #fff;
+    font-size: var(--TitleFontSize);
+    padding: 1em 2em;
+    transition: .5s;
+}
+
+.container > .title > h1 > .btn:hover{
+    background-color: rgb(76, 6, 109);
+    transition: .5 ease;
+}
+
+.container > .modal > .modal-dialog > .modal-content > .modal-body {
+    color: black;
+}
+
+#carouselExampleControls > .carousel-inner > .carousel-item > .ongs {
+    background-color: red;
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 552px) {
+
+    .header > .nav-bar {
+        flex-direction: column;
+    }
+
+    .header > .nav-bar > ul > li > button {
+        display: none;
+    }    
+
+}

@@ -1,0 +1,59 @@
+@use "./fonts" as *;
+
+
+$m_fontfamily: (
+    "TITLE": 'Roboto extra bold',
+    "PARAGRAPH": 'Inter',
+    "LINK": 'Poppins light',
+    "FORM": 'Poppins light'
+);
+
+$m_fontsize: (
+    "DEFAULT": 1em,
+    "TITLE": 2.5em,
+    "LINK": 1em,
+    "INPUT": 1em,
+    "LABEL": 1em
+);
+
+$m_background: (
+    "MAIN_BACKGROUND": #222,
+    "ALTERNATIVE_BACKGROUND": #FFF,
+    "MENU_BACKGROUND": #1b1a1b,
+    "MODAL_BACKGROUND": rgba(49, 47, 49, 0.007),
+    "MOL_CONTENT_BACKGROUND": #1b191b,
+    "MOL_BORDER": #f0316a,
+    "MOL_BORDER_HOVER": #008db8,
+    "FORM_BACKGROUND": #1b1a1b,
+    "FOOTER_BACKGROUND": #f0316a,
+    "BTN_BACKGROUND": #f0316a, 
+    "BTN_ALTERNATIVE_BACKGROUND": #008db8,
+    "TEXTAREA": #353135
+);
+
+$m_textcolor: (
+    "DEFAULT_COLOR": #fff,
+    "ALTERNATIVE_COLOR": #f0316a,
+    "SPAN": #ffc400
+);
+
+$m_elementselection: (
+    "LINK_BACKGROUND": #f0316a,
+    "LINK_TEXT_COLOR": #fff,
+    "TITLE_BACKGROUND": #fd0f5659,
+    "TITLE_COLOR": #fff,
+    "TEXT_BACKGROUND": #fd0f5659,
+    "TEXT_COLOR": #fff
+);
+
+$m_transition: (
+    "DEFAULT_TRANSITION": .5s,
+    "ALL": .5s all,
+    "EASE": .5s ease
+);
+
+// $m_devicewidth: (
+//     "small": 400px,
+//     "medium": 576px,
+//     "desktop": 1024px
+// );

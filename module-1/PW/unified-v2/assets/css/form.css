@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Poppins light";
+  src: url(../components/fonts/poppins-light.woff2);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../components/fonts/inter.woff2);
+}
+@font-face {
+  font-family: "Roboto extra bold";
+  src: url(../components/fonts/roboto-extra-bold.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+}
+body h1::selection,
+body h2::selection,
+body h3::selection,
+body h4::selection,
+body h5::selection,
+body h6::selection {
+  background-color: rgba(253, 15, 86, 0.3490196078);
+  color: #fff;
+}
+body p::selection,
+body span::selection,
+body label::selection,
+body input::selection,
+body textarea::selection,
+body strong::selection {
+  background-color: rgba(253, 15, 86, 0.3490196078);
+  color: #fff;
+}
+body a::selection {
+  background-color: #f0316a;
+  color: #fff;
+}
+
+body > .header {
+  background-color: #1b1a1b;
+  margin-bottom: 2em;
+}
+body > .header .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: none;
+  margin: 0em 1em;
+  padding: 0.5em 0em;
+}
+body > .header .nav-bar .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  list-style: none;
+  font-family: "Poppins light";
+}
+body > .header .nav-bar .menu li a {
+  color: #f0316a;
+  font-size: 1em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+body > .header .nav-bar .menu li a:hover {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: underline;
+  transition: 0.5s ease;
+}
+body > .header .nav-bar .menu li button {
+  background-color: #f0316a;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.5s;
+}
+body > .header .nav-bar .menu li button:hover {
+  background-color: #008db8;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+body > .header .modal {
+  background-color: rgba(49, 47, 49, 0.007);
+}
+body > .header .modal .modal-dialog > .modal-content {
+  background-color: #1b191b;
+  border: 1px solid #f0316a;
+  transition: 0.5s;
+}
+body > .header .modal .modal-dialog > .modal-content:hover {
+  background-color: #1b191b;
+  border: 1px solid #008db8;
+  transition: 0.5s ease;
+}
+body > .header .modal .modal-dialog > .modal-content .modal-header > button {
+  background-color: #f0316a;
+  color: none;
+  font-weight: none;
+  transition: 0.5s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #1b1a1b;
+  border: none;
+  border-radius: 1em;
+  font-family: "Poppins light";
+  margin: 3em auto;
+  padding: 1em;
+  transition: none;
+  width: 30%;
+}
+.container .title {
+  color: #f0316a;
+  font-family: "Roboto extra bold";
+  font-size: 2.5em;
+  margin: 1em 0.5em 0.5em;
+  transition: 0.5s;
+}
+.container form .user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  gap: 1.5em;
+}
+.container form .user-details .input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  gap: 0.5em;
+}
+.container form .user-details .input-box input {
+  border: 1px solid transparent;
+  border-radius: 0.5em;
+  color: none;
+  font-family: "Poppins light";
+  font-size: 1em;
+  height: 2em;
+  width: 80%;
+  margin: 0 auto;
+  outline: none;
+  padding: 1em;
+  transition: 0.5s all;
+}
+.container form .user-details .input-box input:focus, .container form .user-details .input-box input:valid {
+  border: 1px solid #f0316a;
+  border-radius: 0.5em;
+  color: #f0316a;
+  font-family: "Poppins light";
+  font-size: 1em;
+  height: 2em;
+  width: 80%;
+  margin: 0 auto;
+  outline: none;
+  padding: 1em;
+  transition: 0.5s ease;
+}
+.container form .user-details .input-box .details {
+  display: block;
+  color: #fff;
+  font-family: "Poppins light";
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.container form .user-details .dialog-box label {
+  display: block;
+  color: #fff;
+  font-family: "Poppins light";
+  font-size: 1em;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.container form .user-details .dialog-box textarea {
+  background-color: #353135;
+  border-radius: 1em;
+  color: #fff;
+  font-family: "Poppins light";
+  font-size: 0.8em;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 0.5em;
+  width: 100%;
+  transition: 0.5s;
+}
+.container form .user-details .form-check {
+  color: #f0316a;
+  display: block;
+  transition: 0.5s;
+}
+.container form .user-details .form-check:hover {
+  color: #008db8;
+  transition: 0.5s ease;
+}
+.container form .user-details .form-check #flexCheckDefault:hover {
+  cursor: pointer;
+}
+.container form .btn button {
+  background-color: #f0316a;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.5s;
+  border: none;
+  border-radius: 1em;
+  padding: 0.8em 2em;
+  margin-bottom: 1em;
+}
+.container form .btn button:hover {
+  background-color: #f0316a;
+  color: #ff004c;
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 540px) {
+  body > .header .nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: none;
+    gap: 1em;
+  }
+  body > .header .nav-bar .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: none;
+    gap: 1em;
+  }
+  body > .header .nav-bar .menu li > button {
+    display: none;
+  }
+  body > main {
+    width: 100vw;
+  }
+  body > main .container {
+    background-color: none;
+    border: none;
+    border-radius: 0;
+    font-family: "Inter";
+    margin: none;
+    padding: none;
+    transition: none;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=form.css.map */

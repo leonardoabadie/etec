@@ -1,0 +1,208 @@
+// Imports
+@use './functions' as *;
+@use './mixin' as *;
+@use './reset';
+
+
+// Global Settings
+body {
+    @include Selection();
+    background-color: BackgroundColor(MAIN_BACKGROUND);
+    color: TextColor(DEFAULT_COLOR);
+}
+
+
+// Header
+body > .header {
+    background-color: BackgroundColor(MENU_BACKGROUND);
+    margin-bottom: 2em;
+
+    // Navigation
+    .nav-bar {
+        @include FlexBox($justify: space-between, $align: center);
+        margin: 0em 1em;
+        padding: .5em 0em;
+
+        .menu {
+            @include FlexBox($justify: center, $align: center, $gap: 3em);
+            list-style: none;
+            font-family: FontFamily(LINK);
+        
+            li {
+                a {
+                    @include MenuLink($transition: Transition(ALL));
+                    
+                    &:hover {
+                        @include MenuLink($transition: Transition(EASE), $color: TextColor(DEFAULT_COLOR), $decoration: underline);
+                    }
+                }
+                
+                button {
+                    @include Button();
+
+                    &:hover {
+                        @include Button($transition: Transition(EASE), $background: BackgroundColor(BTN_ALTERNATIVE_BACKGROUND));
+                    }
+                }
+            }
+        }
+    }
+
+    .modal {
+        background-color: BackgroundColor(MODAL_BACKGROUND);
+
+        .modal-dialog > .modal-content {
+            @include ModalContent();
+
+            &:hover {
+                @include ModalContent($transition: Transition(EASE), $border_color: BackgroundColor(MOL_BORDER_HOVER));
+            }
+
+            .modal-header > button {
+                @include Button($color: none, $weight: none);
+            }
+        }
+    }
+}
+
+
+// Contaier
+body > .container {
+    @include FlexBox(column, center, center, 5rem);
+    @include Container($width: 40%, $marg: 3rem auto 5rem, $pad: 1rem );
+
+    .carousel {
+        @include FlexBox(column, center, center, 3rem);
+        @include Carousel();
+
+        .title {
+            h1 {
+                color: TextColor(ALTERNATIVE_COLOR);
+                font-family: FontFamily(TITLE);
+                font-size: FontSize(TITLE);
+                word-spacing: 1rem;
+            }
+        }
+
+        #photos-carousel {
+            .carousel-inner {
+                .carousel-item {
+                    img {
+                        border-radius: 3rem;
+                        width: 100%;
+                    }    
+                }
+            }
+        }
+
+        .sub-title {
+            color: TextColor(ALTERNATIVE_COLOR);
+            font-family: FontFamily(TITLE);
+            font-size: FontSize(TITLE) - .5em;
+            word-spacing: 1rem;
+        
+            span {
+                color: TextColor(DEFAULT_COLOR);
+            }
+        }
+        
+    }
+
+    .learning-programming {
+        @include FlexBox(column, center, center, 1rem);
+    
+        header {
+            h2 {
+                color: TextColor(ALTERNATIVE_COLOR);
+                font-family: FontFamily(TITLE);
+                font-size: FontSize(TITLE) - .5em;
+                text-align: center;
+            
+                span {
+                    color: TextColor(DEFAULT_COLOR);
+                }
+            }
+        }
+
+        .content {
+            p {
+                color: TextColor(DEFAULT_COLOR);
+                font-family: FontFamily(PARAGRAPH);
+                font-size: FontSize(DEFAULT);
+                text-align: center;
+            }
+
+            .links {
+                border: 1px solid #fff;
+                border-radius: 1rem;
+                list-style: none;
+                padding: 1rem;
+
+                li {
+                    a {
+                        @include MenuLink($transition: Transition(ALL), $color: #008db8);
+                        
+                        &:hover {
+                            @include MenuLink($transition: Transition(EASE), $color: TextColor(ALTERNATIVE_COLOR), $decoration: underline);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Footer 
+body > .footer {
+    background-color: BackgroundColor(FOOTER_BACKGROUND);
+    color: TextColor(DEFAULT_COLOR);
+
+    .social-media {
+        .btn {
+            @include SocialMediaLinks();
+
+            &:hover {
+                @include SocialMediaLinks($transition: Transition(EASE), $background: #fd0f56, $border_radius: .5em)
+            }
+        }      
+    }
+
+    .formulary {
+        form {
+            font-family: FontFamily(FORM);
+            font-size: FontSize(DEFAULT);
+        }
+    }
+
+
+    .nocopyright {
+        @include NoCopyright();
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    body > .header {
+        .nav-bar {
+            @include FlexBox($direction: column, $justify: center, $gap: 1em);
+            .menu {
+                @include FlexBox($direction: column, $gap: 1em);
+
+                li > button {
+                    display: none;
+                }
+            }
+        }
+    }    
+
+    body > .container {
+        @include Container($marg: 3rem 0, $pad: 0, $width: 100vw);
+    
+        .carousel {
+            border: none;
+            border-radius: 0;
+            width: 100%;
+        }
+    }
+}

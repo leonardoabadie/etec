@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "Poppins light";
+  src: url(../components/fonts/poppins-light.woff2);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../components/fonts/inter.woff2);
+}
+@font-face {
+  font-family: "Roboto extra bold";
+  src: url(../components/fonts/roboto-extra-bold.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+}
+body h1::selection,
+body h2::selection,
+body h3::selection,
+body h4::selection,
+body h5::selection,
+body h6::selection {
+  background-color: rgba(253, 15, 86, 0.3490196078);
+  color: #fff;
+}
+body p::selection,
+body span::selection,
+body label::selection,
+body input::selection,
+body textarea::selection,
+body strong::selection {
+  background-color: rgba(253, 15, 86, 0.3490196078);
+  color: #fff;
+}
+body a::selection {
+  background-color: #f0316a;
+  color: #fff;
+}
+
+body > .header {
+  background-color: #1b1a1b;
+  margin-bottom: 2em;
+}
+body > .header .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: none;
+  margin: 0em 1em;
+  padding: 0.5em 0em;
+}
+body > .header .nav-bar .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  list-style: none;
+  font-family: "Poppins light";
+}
+body > .header .nav-bar .menu li a {
+  color: #f0316a;
+  font-size: 1em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+body > .header .nav-bar .menu li a:hover {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: underline;
+  transition: 0.5s ease;
+}
+body > .header .nav-bar .menu li button {
+  background-color: #f0316a;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.5s;
+}
+body > .header .nav-bar .menu li button:hover {
+  background-color: #008db8;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+body > .header .modal {
+  background-color: rgba(49, 47, 49, 0.007);
+}
+body > .header .modal .modal-dialog > .modal-content {
+  background-color: #1b191b;
+  border: 1px solid #f0316a;
+  transition: 0.5s;
+}
+body > .header .modal .modal-dialog > .modal-content:hover {
+  background-color: #1b191b;
+  border: 1px solid #008db8;
+  transition: 0.5s ease;
+}
+body > .header .modal .modal-dialog > .modal-content .modal-header > button {
+  background-color: #f0316a;
+  color: none;
+  font-weight: none;
+  transition: 0.5s;
+}
+
+body > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: none;
+  border: none;
+  border-radius: none;
+  font-family: "Inter";
+  margin: 3rem auto 5rem;
+  padding: 1rem;
+  transition: none;
+  width: 40%;
+}
+body > .container .carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: #1b1a1b;
+  border-radius: 1.5rem;
+  padding: 2rem 3rem;
+}
+body > .container .carousel .title h1 {
+  color: #f0316a;
+  font-family: "Roboto extra bold";
+  font-size: 2.5em;
+  word-spacing: 1rem;
+}
+body > .container .carousel #photos-carousel .carousel-inner .carousel-item img {
+  border-radius: 3rem;
+  width: 100%;
+}
+body > .container .carousel .sub-title {
+  color: #f0316a;
+  font-family: "Roboto extra bold";
+  font-size: 2em;
+  word-spacing: 1rem;
+}
+body > .container .carousel .sub-title span {
+  color: #fff;
+}
+body > .container .learning-programming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body > .container .learning-programming header h2 {
+  color: #f0316a;
+  font-family: "Roboto extra bold";
+  font-size: 2em;
+  text-align: center;
+}
+body > .container .learning-programming header h2 span {
+  color: #fff;
+}
+body > .container .learning-programming .content p {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 1em;
+  text-align: center;
+}
+body > .container .learning-programming .content .links {
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  list-style: none;
+  padding: 1rem;
+}
+body > .container .learning-programming .content .links li a {
+  color: #008db8;
+  font-size: 1em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+body > .container .learning-programming .content .links li a:hover {
+  color: #f0316a;
+  font-size: 1em;
+  text-decoration: underline;
+  transition: 0.5s ease;
+}
+
+body > .footer {
+  background-color: #f0316a;
+  color: #fff;
+}
+body > .footer .social-media .btn {
+  background-color: none;
+  border: none;
+  border-radius: none;
+  transition: 0.5s;
+}
+body > .footer .social-media .btn:hover {
+  background-color: #fd0f56;
+  border: none;
+  border-radius: 0.5em;
+  transition: 0.5s ease;
+}
+body > .footer .formulary form {
+  font-family: "Poppins light";
+  font-size: 1em;
+}
+body > .footer .nocopyright {
+  background-color: #fd0f56;
+  font-family: "Inter";
+  font-size: 1em;
+}
+
+@media screen and (max-width: 540px) {
+  body > .header .nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: none;
+    gap: 1em;
+  }
+  body > .header .nav-bar .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: none;
+    gap: 1em;
+  }
+  body > .header .nav-bar .menu li > button {
+    display: none;
+  }
+  body > .container {
+    background-color: none;
+    border: none;
+    border-radius: none;
+    font-family: "Inter";
+    margin: 3rem 0;
+    padding: 0;
+    transition: none;
+    width: 100vw;
+  }
+  body > .container .carousel {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=success-wall.css.map */

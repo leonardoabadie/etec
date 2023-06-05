@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Exercício</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function incrementar(a, b, c) { return a + b * c; }
+        var n, countIncremento, valorIncremento;   
+        n = parseInt(prompt("Digite o primeiro número :> "));
+        countIncremento = parseInt(prompt("Quantas vezes incrementar " + n + " :> "));
+        valorIncremento = parseInt(prompt("Valor do incremento :> "));
+        document.write("Valor de " + n + " no pós-incremento de " + countIncremento + " valendo " + valorIncremento + " @> " + incrementar(n, countIncremento, valorIncremento));
+    </script>
+</body>

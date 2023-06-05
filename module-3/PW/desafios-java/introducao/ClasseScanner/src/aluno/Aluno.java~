@@ -1,0 +1,21 @@
+package aluno;
+import java.util.Scanner;
+
+public class Aluno {
+	public static void main(String[] args) {
+		int idade;
+		String alterego;	
+		/*
+		 objeto scan do tipo ´Scanner´ > para efetuar entrada de dados
+		 System.in permite que o usuario insira dados a partir da linha de comando
+		*/
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("Digite o nome do seu alter ego: ");
+		alterego = scan.nextLine();
+		System.out.print("Digite a idade do seu alter ego: ");
+		idade = scan.nextInt();
+		
+		System.out.println("Alter ego cadastrado!!! Nome: " + alterego + " Idade: " + idade);
+	}
+}
